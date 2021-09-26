@@ -1,7 +1,7 @@
 from brownie import Lottery, accounts, config, network
 from web3 import Web3
 
-# 0.016
+# 0.017
 # 16000000000000000
 
 
@@ -12,4 +12,4 @@ def test_get_enterance_fee():
         {"from": account},
     )
     assert lottery.getEnteranceFee() > Web3.toWei(0.014, "ether")
-    assert lottery.getEnteranceFee() < Web3.toWei(0.016, "ether")
+    assert lottery.getEnteranceFee() < Web3.toWei(0.018, "ether")
